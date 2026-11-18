@@ -28,10 +28,10 @@ streamlit run dashboard.py
 
 ```
 Sales Data Analysis/
+├── .gitignore            # Git ignore file
 ├── generate_data.py      # Generates realistic sales data → SQLite
 ├── sql_analysis.py       # 14 SQL analysis functions (pandas + sqlite3)
 ├── dashboard.py          # Interactive Streamlit dashboard
-├── sales_data.db         # SQLite database (auto-generated)
 ├── requirements.txt      # Python dependencies
 └── README.md             # This file
 ```
