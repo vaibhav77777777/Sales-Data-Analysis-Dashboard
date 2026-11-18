@@ -1,0 +1,17 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# SQLite database (auto-generated)
+*.db
+*.sqlite3
+
+# Environments and OS files
+.env
+.venv/
+env/
+.DS_Store
+Thumbs.db
+*.log
