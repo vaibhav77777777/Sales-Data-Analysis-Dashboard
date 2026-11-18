@@ -9,14 +9,20 @@ RFM analysis, discount impact, seasonality, and more.
 Dependencies: pandas, sqlite3 (stdlib)
 """
 
+import os
 import sqlite3
 import pandas as pd
 
-# ---------------------------------------------------------------------------
-# Configuration
-# ---------------------------------------------------------------------------
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_PATH = os.path.join(BASE_DIR, "sales_data.db")
 
-DB_PATH = r"c:\Users\VAIBHAV\Downloads\Sales Data Analysis\sales_data.db"
+# Auto-generates the database automatically when deploying to the cloud
+if not os.path.exists(DB_PATH):
+    try:
+        import generate_data
+        generate_data.main()
+    except Exception as e:
+        print(f"Warning: Could not auto-generate database: {e}")
 
 # ---------------------------------------------------------------------------
 # Helper
